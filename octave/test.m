@@ -5,11 +5,12 @@ addpath('train');
 addpath('collect');
 addpath('resources');
 
-table = [ 1 2 3 4; 2 3 4 5; 3 4 5 6; 4 5 6 7; 5 6 7 8; ...
-		  6 7 8 9; 7 8 9 10; 8 9 10 11; 9 10 11 12; 10 11 12 13; ];
+table = [ 1 2 3 4; 2 4 6 8; 3 6 9 12; 4 8 12 16; 5 10 15 20; ...
+		  6 5 4 3; 7 4 1 -2; 8 3 -2 -6; 9 2 -5 -12; 10 1 -8 -17; ];
 
 includeInX =  [0; 1; 0; 1;];
 yIndex = 3;
 
-[X, y, mu, sigma] = setup(table, yIndex, includeInX);
+[Xtrain, ytrain, Xcv, ycv, Xtest, ytest, mu, sigma] = ...
+	setup(table, yIndex, includeInX);
 
