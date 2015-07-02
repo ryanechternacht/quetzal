@@ -1,4 +1,5 @@
-function [Xtrain, ytrain, Xcv, ycv, Xtest, ytest, sigma, mu] = setup(table, yIndex, includeInX)
+function [Xtrain, ytrain, Xcv, ycv, Xtest, ytest, sigma, mu] = ... 
+	setup(table, yIndex, includeInX, runmode)
 % takes the information supplied by the user and setups the data necessary to 
 % perform the machine learning
 
