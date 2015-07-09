@@ -9,7 +9,7 @@ function [theta] = doStep(X, y, runmode)
 % 		  requested must be based off of the runmode provided)
 
 % basic linear regression
-if(runmode = '1')
+if runmode == '1'
 	[theta] = linearRegression(X, y);
 end
 

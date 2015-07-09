@@ -16,7 +16,7 @@ function [Xtrain, ytrain] = plan(XtrainMaster, ytrainMaster, runmode)
 % -- modify execution paramters for later stages
 
 % no modifications made
-if(runmode = '1')
+if runmode == '1'
 	Xtrain = XtrainMaster;
 	ytrain = ytrainMaster;
 end
